@@ -709,6 +709,14 @@
         document.getElementById(id).classList.add('active');
       });
     });
+
+    // Remove the click event handler from the "Back to Site" link
+document.querySelectorAll('.back-to-site').forEach(link => {
+    link.addEventListener('click', e => {
+        window.location.href="Index.html"
+        // Don't prevent default or add section switching logic
+    });
+});
     
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
